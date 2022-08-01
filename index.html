@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var n = prompt("请输入一个数：");
+        var str1 = "";
+        for(var x=0;x<n;x++)
+        {
+            for(var y=0;y<=x;y++)
+            {
+                str1+="* ";
+            }
+            str1+="<br>";
+        }
+        document.write(str1);
+        document.write("<br>");
+        document.write("<br>");
+
+        var str2= "";
+        for(var x=0;x<n;x++)
+        {
+            var q=n-x;
+            for(var z=0;z<=q;z++)
+            {
+                str2+="&nbsp;";
+            }
+            for(var y=0;y<=x;y++)
+            {
+                str2+="* ";
+            }
+            str2+="<br>";
+        }
+        document.write(str2);
+        document.write("<br>");
+        document.write("<br>");
+
+        var str3="";
+        for(var x=0;x<n;x++)
+        {
+            var w=n-x+1;
+            for(var y=w;y>0;y--)
+            {
+                str3+="&nbsp; ";
+            }
+            for(var y=0;y<=x;y++)
+            {
+                str3+="* ";
+            }
+            str3+="<br>";
+        }
+        for(var x=0;x<=n;x++)
+        {
+            var w=n-x+1;
+            for(var y=w;y>0;y--)
+            {
+                str3+="* ";
+            }
+            for(var y=0;y<=x;y++)
+            {
+                str3+="&nbsp;";
+            }
+            str3+="<br>";
+        }
+        document.write(str3);
+        document.write("<br>");
+        document.write("<br>");
+    </script>
+</body>
+</html>
