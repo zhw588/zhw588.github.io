@@ -1,0 +1,1 @@
+INSERT INTO `dede_sys_module` VALUES('4','b437d85a7a7bc778c9c79b5ec36ab9aa','友情链接','','','0','');

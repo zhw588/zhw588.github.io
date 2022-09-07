@@ -1,0 +1,1 @@
+<a id="quick_submit" class="fa fa-pencil" rel="nofollow" href="[field:typelink /]"></a>

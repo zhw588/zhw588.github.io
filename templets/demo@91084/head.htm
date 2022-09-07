@@ -1,0 +1,46 @@
+<header class="header">
+  <div class="h-fix">
+    <div class="container">
+      <h1 class="logo"> <a href="/" title="{dede:global.cfg_webname/}"> <img id="light-logo" src="/style/images/logo1.png" alt="{dede:global.cfg_webname/}" title="{dede:global.cfg_webname/}"/> <img id="dark-logo" src="/style/images/logo2.png" alt="{dede:global.cfg_webname/}" title="{dede:global.cfg_webname/}"/> </a> </h1>
+      <div id="m-btn" class="m-btn"><i class="fa fa-bars"></i></div>
+      <div class="search"> <i class="s-btn off fa fa-search"></i>
+        <div class="s-form"> <i class="arrow fa fa-caret-up"></i>
+          <form  name="formsearch" action="{dede:global.cfg_cmsurl/}/plus/search.php" class="sform">
+            <input class="sinput" name="q" type="text" placeholder="请输入搜索词">
+            <button><i class="fa fa-search"></i></button>
+          </form>
+        </div>
+      </div>
+      <div class="darkmode"> <a href="javascript:switchNightMode()" target="_self" class=""><i class="fa fa-moon-o"></i></a> </div>
+      <nav class="nav-bar" id="nav-box" data-type="index" data-infoid="">
+        <ul class="nav">
+          <li id="nvabar-item-index"><a href="/">首页</a></li>
+          {dede:channelartlist row=6 typeid='top'}
+          <li id="navbar-category-3" class="li-cate-3"><a href="{dede:field name='typeurl'/}">{dede:field name='typename'/}</a>
+          {dede:field name=typeid runphp="yes"}
+    global $dsql;
+    $sql = "SELECT id From `#@__arctype` WHERE reid='@me' And ishidden<>1 order by sortrank asc limit 0, 100 ";
+    $row = $dsql->GetOne($sql);
+    @me=is_array($row)?'
+            <ul class="sub-menu">
+            ':'';
+      {/dede:field}
+              {dede:channel type='son' noself='yes'}
+              <li id="navbar-category-8" class="li-cate-8"><a href="[field:typelink/]">[field:typename/]</a></li>
+              {/dede:channel}
+            {dede:field name=typeid runphp="yes"}
+      global $dsql; $sql = "SELECT id From `#@__arctype` WHERE reid='@me' And ishidden<>1 order by
+      sortrank asc limit 0, 100 ";
+      $row = $dsql->GetOne($sql);
+      @me=is_array($row)?'
+    </ul>
+    ':'';
+    {/dede:field}
+          </li>
+          {/dede:channelartlist}
+        </ul>
+      </nav>
+      <div class="submit fr"> {dede:type typeid='22'}<a href="[field:typelink /]" target="_blank" class="a transition"><i class="fa fa-heart"></i>[field:typename /]</a>{/dede:type} </div>
+    </div>
+  </div>
+</header>

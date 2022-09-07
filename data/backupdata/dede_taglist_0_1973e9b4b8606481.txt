@@ -1,0 +1,2 @@
+INSERT INTO `dede_taglist` VALUES('1','6','0','20','百度');
+INSERT INTO `dede_taglist` VALUES('2','6','0','20','搜索引擎');

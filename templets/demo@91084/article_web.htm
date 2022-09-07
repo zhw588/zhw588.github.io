@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="renderer" content="webkit">
+<meta name="force-rendering" content="webkit">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1">
+<meta name="applicable-device" content="pc,mobile">
+<title>{dede:field.title/}_{dede:global.cfg_webname/}</title>
+<meta name="keywords" content="{dede:field.keywords/}" />
+<meta name="description" content="{dede:field.description function='html2text(@me)'/}" />
+<link rel="stylesheet" href="/style/css/font-awesome.min.css" type="text/css">
+<link rel="stylesheet" href="/style/css/style.css?ver=3.72" type="text/css">
+<!--[if lt IE 9]><div class="fuck-ie"><p class="tips">*您的IE浏览器版本过低，为获得更好的体验请使用Chrome、Firefox或其他现代浏览器!</p></div><![endif]-->
+<script src="/style/js/jquery-2.2.4.min.js" type="text/javascript"></script>
+<script src="/style/js/zblogphp.js" type="text/javascript"></script>
+<style type="text/css">
+.mzz{ display:none}
+@media screen and (max-width:768px) {
+    .pczz{ display:none}
+	.mzz{ display:inline-block !important}
+}
+</style>
+</head>
+<body>
+{dede:include filename="head.htm"/}
+<div id="mask"></div>
+<div class="breadnav">
+  <div class="container bread"> <i class="fa fa-home"></i>{dede:field.position/} </div>
+</div>
+<div class="container">
+  <div class="part">
+    <div class="bar clearfix">
+      <h1 class="tt"> {dede:field.title/} </h1>
+      <div class="r-intro fr"> <span class="data fr"> <small class="info"><i class="fa fa-clock-o"></i>{dede:field.pubdate function='strftime("%Y-%m-%d",@me)'/}</small> <small class="info"><i class="fa fa-eye"></i><script src="/plus/count.php?view=yes&aid={dede:field.id/}&mid={dede:field.mid/}" type='text/javascript' language="javascript"></script></small> </span> </div>
+    </div>
+    <div class="items">
+      <div class="row post-single">
+        <div class="col-xs-12 col-sm-12 col-md-8">
+          <div class="pic fl">
+            <div class="blur blur-layer" style="background: transparent url({dede:field.litpic/}) no-repeat center center;-webkit-background-size: cover;-moz-background-size: cover;-o-background-size: cover;background-size: cover;animation: rotate 20s linear infinite;"> </div>
+            <img class="img-cover" src="{dede:field.litpic/}" alt="{dede:field.title/}" title="{dede:field.title/}"> </div>
+          <div class="list">
+            <p>站点名称：{dede:field.title/}</p>
+            <p class="cate">所属分类：<a href="{dede:field.typname/}" class="mcolor">{dede:field.typename/}</a></p>
+            <p class="site">官方网址：{dede:field.link/}</p>
+            <p class="seo">SEO查询： <a rel="nofollow" class="" href="https://www.aizhan.com/cha/{dede:field.link/}" target="_blank"><i class="fa fa-bar-chart"></i>爱站网</a> 
+              <a rel="nofollow" class="pczz" href="http://seo.chinaz.com/{dede:field.link/}" target="_blank"><i class="fa fa-bar-chart"></i>站长工具</a> <a rel="nofollow" class="mzz" href="http://mseo.chinaz.com/?host={dede:field.link/}" target="_blank"><i class="fa fa-bar-chart"></i>站长工具</a> </p>
+            <a class="btn transition" target="_blank" href="http://{dede:field.link/}" rel="nofollow">进入网站 <i class="fa fa-chevron-circle-right"></i></a> </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="part">
+    <p class="tt"><span>站点介绍</span></p>
+    <div class="items">
+      <div class="art-main">
+       {dede:field.jieshao/}
+      </div>
+    </div>
+  </div>
+
+  <!-- 广告位AD3  -->
+  <div class="part related">
+    <p class="tt"><span>相似站点</span></p>
+    <div class="items">
+      <div class="row">
+        {dede:likeart row='8' titlelen='50' addfields='link' channelid='17'}
+        <div class="col-xs-6 col-sm-4 col-md-3">
+          <div class="item"> <a class="link" target="_blank" href="http://[field:link/]" rel="nofollow"><i class="autoleft fa fa-angle-right" title="直达网站"></i></a> <a class="a" href="[field:arcurl/]" title="[field:title /]" target="_blank"> <img class="img-cover br" src="[field:litpic /]" alt="[field:title /]" title="[field:title /]">
+            <h3>[field:title /]</h3>
+            <p> [field:description function='cn_substr(@me,100)'/]...</p>
+            </a> </div>
+        </div>
+        {/dede:likeart}
+      </div>
+    </div>
+  </div>
+  
+</div>
+{dede:include filename="foot.htm"/}
+<!--[if lt IE 9]><script src="/style/js/html5-css3.js"></script><![endif]-->
+</body>
+</html>

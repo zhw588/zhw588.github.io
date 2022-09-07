@@ -1,0 +1,1 @@
+<a href="[field:typelink /]" target="_blank" class="a transition"><i class="fa fa-heart"></i>[field:typename /]</a>

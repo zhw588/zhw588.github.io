@@ -1,0 +1,4 @@
+INSERT INTO `dede_myppt` VALUES('11','2','0','PC端幻灯二','','/uploads/190108/1-1Z10Q0341G28.jpg','https://www.baidu.com/');
+INSERT INTO `dede_myppt` VALUES('12','2','0','PC端幻灯一','','/uploads/190108/1-1Z10Q03450413.jpg','https://www.baidu.com/');
+INSERT INTO `dede_myppt` VALUES('13','3','0','手机端幻灯一','','/uploads/190109/1-1Z10Z91544O0.jpg','https://www.baidu.com/');
+INSERT INTO `dede_myppt` VALUES('14','3','0','手机端幻灯二','','/uploads/190109/1-1Z10Z91621160.jpg','https://www.baidu.com/');

@@ -1,0 +1,1 @@
+<a class="transition tags" href="[field:link/]" title="[field:tag /]">[field:tag /]</a> 
